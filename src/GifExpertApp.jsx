@@ -2,8 +2,7 @@
 import { useState } from "react";
 
 // Components
-import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from "./components/GifGrid";
+import { AddCategory, GifGrid } from "./components";
 
 
 
@@ -13,7 +12,7 @@ export const GifExpertApp = () => {
     /*===== Estados =====*/
 
     // - Categories
-    const [categories, setCategories] = useState([ 'One Punch', 'Dragon Ball Z', 'Pokemon' ]);
+    const [categories, setCategories] = useState([ 'Dragon Ball Z' ]);
 
     
 
@@ -41,11 +40,14 @@ export const GifExpertApp = () => {
     
         <>
 
+            {/* Titulo */}
             <h1>GifExpertApp</h1>
 
+            {/* Input */}
             <AddCategory
                 onNewCategory={ onAddCategory } />
 
+            {/* Categoria - Contenedor de gifs según categoria */}
             {
                 categories.map( ( category ) => {
                     return (
